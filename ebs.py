@@ -1,4 +1,4 @@
-import reqeusts,re,telegram
+import requests,re,telegram
 url = "https://5dang.ebs.co.kr/auschool/detail?courseId=BK0KAKC0000000014"
 page_source = requests.get(url).text
 url = "https://wstrotu.ebs.co.kr" + re.split('wstrotu.ebs.co.kr',page_source,re.S)[1].replace(";"," ").split("?")[0]
