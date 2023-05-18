@@ -24,3 +24,4 @@ jobs:
           python ebs.py
         env:
             BOT_TELEGRAM_TOKEN: ${{ secrets.BOT_TELEGRAM_TOKEN }} 
+            CHAT_ID: ${{ secrets.CHAT_ID }}
