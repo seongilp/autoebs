@@ -5,9 +5,6 @@ on:
 #    - cron: '*/5 * * * *' # every Monday on 07:00 PM (KST)
     - cron: '55 23 * * 0-5' # UST 기준의 크론. UST 23:55 는 KST 08:55, 1-6은 월~토
   workflow_dispatch:
-    inputs:
-      tags:
-        description: 'Test scenario tags'
 jobs:
   record:
     runs-on: ubuntu-latest
