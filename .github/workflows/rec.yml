@@ -1,0 +1,27 @@
+name: Automatic EBS Record
+#on: [push]
+on:
+  schedule:
+#    - cron: '*/5 * * * *' # every Monday on 07:00 PM (KST)
+    - cron: '55 23 * * 0-5' # UST 기준의 크론. UST 23:55 는 KST 08:55, 1-6은 월~토
+  workflow_dispatch:
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    steps:  
+      - uses: actions/checkout@v3    
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+          cache: 'pip' # caching pip dependencies
+      - run: |
+          pip install -r requirements.txt
+          apt install ffmpeg
+      - name: Run!      
+        run: |        
+          export BOT_TELEGRAM_TOKEN=$BOT_TELEGRAM_TOKEN
+          ffmpeg -re -i "https://ebsonair.ebs.co.kr/fmradiofamilypc/familypc1m/chunklist.m3u8" -vn -acodec copy -t 60 "/home/runner/$(date +%Y%m%d-%H%M).m4a"
+          python ebs.py
+        env:
+            BOT_TELEGRAM_TOKEN: ${{ secrets.BOT_TELEGRAM_TOKEN }} 
+            CHAT_ID: ${{ secrets.CHAT_ID }}
