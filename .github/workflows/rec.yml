@@ -1,4 +1,4 @@
-name: Automatic EBS Record
+name: EBS record
 #on: [push]
 on:
   schedule:
