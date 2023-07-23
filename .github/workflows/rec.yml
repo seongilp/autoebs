@@ -16,7 +16,7 @@ jobs:
           cache: 'pip' # caching pip dependencies
       - run: |
           pip install -r requirements.txt
-          apt install ffmpeg
+          sudo apt-get install ffmpeg
       - name: Run!      
         run: |        
           export BOT_TELEGRAM_TOKEN=$BOT_TELEGRAM_TOKEN
