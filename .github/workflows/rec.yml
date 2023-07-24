@@ -2,7 +2,7 @@ name: EBS record
 #on: [push]
 on:
   schedule:
-    - cron: '0 9 * * 0-5' # UST 기준의 크론. UST 23:55 는 KST 08:55, 1-6은 월~토
+    - cron: '15 9 * * 0-5' # UST 기준의 크론. UST 23:55 는 KST 08:55, 1-6은 월~토
   workflow_dispatch:
 jobs:
   record:
