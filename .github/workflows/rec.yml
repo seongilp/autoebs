@@ -20,8 +20,8 @@ jobs:
       - name: Run!      
         run: |        
           export BOT_TELEGRAM_TOKEN=$BOT_TELEGRAM_TOKEN
-          ffmpeg -re -i "https://ebsonair.ebs.co.kr/fmradiofamilypc/familypc1m/chunklist.m3u8" -vn -acodec copy -t 60 "/home/runner/$(date +%Y%m%d-%H%M).m4a"
-          python ebs.py
+          export CHAAT_ID=$CHAT_ID
+          sh ebs.sh Test 1
         env:
             BOT_TELEGRAM_TOKEN: ${{ secrets.BOT_TELEGRAM_TOKEN }} 
             CHAT_ID: ${{ secrets.CHAT_ID }}
