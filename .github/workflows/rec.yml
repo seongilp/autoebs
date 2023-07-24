@@ -19,8 +19,8 @@ jobs:
           sudo apt-get install ffmpeg
       - name: Run!      
         run: |        
-          export BOT_TELEGRAM_TOKEN=$BOT_TELEGRAM_TOKEN
-          export CHAAT_ID=$CHAT_ID
+          export TOKEN=$BOT_TELEGRAM_TOKEN
+          export CHAT_ID=$CHAT_ID
           sh ebs.sh Test 1
         env:
             BOT_TELEGRAM_TOKEN: ${{ secrets.BOT_TELEGRAM_TOKEN }} 
