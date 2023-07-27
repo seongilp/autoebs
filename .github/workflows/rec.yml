@@ -9,6 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:  
       - uses: actions/checkout@v3    
+      - uses: tecolicom/actions-use-apt-tools@v1
+        with:
+          tools: 'ffmpeg'
+          cache: yes
+          method: package
       - run: |  
           sudo apt-get install ffmpeg
       - name: Run!      
