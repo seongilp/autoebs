@@ -14,8 +14,6 @@ jobs:
           tools: 'ffmpeg'
           cache: yes
           method: package
-      - run: |  
-          sudo apt-get install ffmpeg
       - name: Run!      
         run: |        
           export TOKEN=$BOT_TELEGRAM_TOKEN
