@@ -18,7 +18,7 @@ jobs:
         run: |        
           export TOKEN=$BOT_TELEGRAM_TOKEN
           export CHAT_ID=$CHAT_ID
-          sh ebs.sh MouseEnglish 23
+          sh ebs.sh MouseEnglish 1
         env:
             BOT_TELEGRAM_TOKEN: ${{ secrets.BOT_TELEGRAM_TOKEN }} 
             CHAT_ID: ${{ secrets.CHAT_ID }}
