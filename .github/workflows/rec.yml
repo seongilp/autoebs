@@ -8,17 +8,13 @@ jobs:
   record:
     runs-on: ubuntu-latest
     steps:  
-      - uses: actions/checkout@v3    
-      - uses: tecolicom/actions-use-apt-tools@v1
-        with:
-          tools: 'ffmpeg'
-          cache: yes
-          method: package
+      - uses: actions/checkout@v3
       - name: Run!      
         run: |        
           export TOKEN=$BOT_TELEGRAM_TOKEN
           export CHAT_ID=$CHAT_ID
-          sh ebs.sh MouseEnglish 1
+          sudo apt install ffmpeg
+          sh ebs.sh MouseEnglish 23
         env:
             BOT_TELEGRAM_TOKEN: ${{ secrets.BOT_TELEGRAM_TOKEN }} 
             CHAT_ID: ${{ secrets.CHAT_ID }}
