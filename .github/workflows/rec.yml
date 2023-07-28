@@ -2,7 +2,7 @@ name: EBS record
 #on: [push]
 on:
   schedule:
-    - cron: '36 21 * * 0-6' # UST 기준의 크론. UST 23:55 는 KST 08:55, 1-6은 월~토
+    - cron: '39 21 * * 0-6' # UST 기준의 크론. UST 23:55 는 KST 08:55, 1-6은 월~토
   workflow_dispatch:
 jobs:
   record:
@@ -14,7 +14,7 @@ jobs:
           export TOKEN=$BOT_TELEGRAM_TOKEN
           export CHAT_ID=$CHAT_ID
           sudo apt install ffmpeg
-          sh ebs.sh MouseEnglish 23
+          sh ebs.sh MouseEnglish 19
         env:
             BOT_TELEGRAM_TOKEN: ${{ secrets.BOT_TELEGRAM_TOKEN }} 
             CHAT_ID: ${{ secrets.CHAT_ID }}
