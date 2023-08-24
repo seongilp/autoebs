@@ -20,4 +20,4 @@ jobs:
             CHAT_ID: ${{ secrets.CHAT_ID }}
 branding:
   icon: radio
-  color: yello
+  color: green
