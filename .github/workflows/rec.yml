@@ -14,7 +14,7 @@ jobs:
           export TOKEN=$BOT_TELEGRAM_TOKEN
           export CHAT_ID=$CHAT_ID
           sudo apt install ffmpeg
-          sh ebs.sh MouseEnglish 19
+          sh ebs.sh MouseEnglish_tg 19
         env:
             BOT_TELEGRAM_TOKEN: ${{ secrets.BOT_TELEGRAM_TOKEN }} 
             CHAT_ID: ${{ secrets.CHAT_ID }}
