@@ -11,8 +11,8 @@ warnings.filterwarnings("ignore", category=InsecureRequestWarning)
 params = {
     'returnUrl': 'https://5dang.ebs.co.kr',
     'login_uri': 'https://5dang.ebs.co.kr/sso/login',
-    'i': 'zihado4',
-    'c': 'INGlife2019@'
+    'i': '##ID##',
+    'c': '##PWD##'
 }
 
 header = {
@@ -20,8 +20,8 @@ header = {
     'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36'
 }
 
-token = '1645085402:AAEkgvhpnuo7THuxBx8TAbi-ki3XBWC9qQQ'
-chat_id = '-1001442562593'
+token = '##TOKEN##'
+chat_id = '##ID##'
 bot = telegram.Bot(token=token)
 
 login_url = 'https://5dang.ebs.co.kr/login'
